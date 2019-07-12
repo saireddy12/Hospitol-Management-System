@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Welcome To Sign Up Page</title>
+<link rel="stylesheet" type="text/css" href="style1.css" />
+<link rel="stylesheet" type="text/css" href="font-awesome.css"/>
+</head>
+<div id="Sign_Up">
+<form name="Sign_Up" onsubmit="return validateForm();" method="post">
+<h3>Create New Account</h3>
+<input type="text" id="fname" placeholder="Enter full name" />
+<input type="text" id="lname" placeholder="Enter last name" /><br>
+<input type="text" id="email" placeholder="Enter email address" /><br>
+<input type="text" id="remail" placeholder="Re-enter email address" /><br>
+<input type="text" id="username" placeholder="Enter UserName" /><br>
+<input type="password" id="password" placeholder="Enter New Password" /><br>
+<br>
+<b>Birthday</b><br>
+<select name="select">
+<option selected="selected" value="">Day</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+<select  name="select">
+<option selected="selected" value="">Month</option>
+<option value="Jan">Jan</option>
+<option value="Feb">Feb</option>
+<option value="Mar">Mar</option>
+<option value="Apr">Apr</option>
+<option value="May">May</option>
+<option value="Jun">Jun</option>
+</select>
+<select  name="select">
+<option selected="selected" value="">Year</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+</select><br>
+<br>
+</div>
+<div id="sign">
+<input type="radio" name="sex" value="1"/>Male
+<input type="radio" name="sex" value="2"/>Female <br>
+</div>
+<div id="sign_wrap">
+<input type="button" id="sign-btn" value="sign up" onclick="validate()"/>
+</div>
+<body>
+<script>
+      var count=2;
+      function validate()
+      {
+        var username= document.Sign_Up.username.value;
+        var password= document.Sign_Up.password.value;
+        var valid = false;
+        var usernameArray = ["Adithya"];
+        var passwordArray = ["adi123"];
+        for (var i=0; i< usernameArray.length; i++)
+        {
+          if ((username == usernameArray[i]) && (password == passwordArray[i]))
+          valid = true;
+		  break;
+        }
+
+        if(valid==true)
+        {
+		  confirm("Details are entered");
+          alert("Account Created Successfully");
+		  window.location = "index.html"
+          return false;
+        }
+		else
+		{
+		alert("Fill the entire details");
+		}		       
+      }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="12.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="13.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="14.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<h1>About us</h1>
+<pre>
+<p style="color:blue;">Setting new benchmark in health care
+Since two decades, Yashoda Group of Hospitals has been providing quality healthcare for the people in their diverse medical needs. 
+People trust us because of the strong relationships we've built with them over the years.
+
+Under astute leadership and strong management, Yashoda Group of Hospitals has evolved as a centre of excellence in medicine 
+providing the highest quality standards of medical treatment to all sections of the society.
+ Our work has always been guided by the needs of patients and delivered by our perfectly combined revolutionary technology,
+ best medical expertise and advanced procedures.
+
+We offer sophisticated diagnostic and therapeutic care in virtually every specialty and subspecialty of medicine and surgery.
+ Our three hospitals had a total of above 25,00,000 patients admissions in the last 5 years and  
+performed 1,00,000 major surgeries per year, 2,00,000 surgical procedures per year.
+
+3 independent hospitals
+3 Heart Institutes
+3 Cancer Institutes
+1710 beds
+62 Medical specialties
+700 Specialist doctors
+Constantly pushing our horizons to excellence, we are continuously seeking solutions to provide better patient care by improving our overall facilities of hospital management and at the same time ensuring control on the patient cost.
+
+<br>
+
+<h3>Key Features</h3>
+
+Setting the Benchmark for Quality Care:  Our continuous search for best practices in healthcare has lead to our superior quality and performance. We have emerged as ‘leaders in the field’ with our rare and complex procedures, employing most advanced technology for quick and safe treatment.
+Team: The best team of doctors with excellent experience and expertise in all the specialties. Our team doctors are board certified, experienced in wide range of subspecialties and passionate about improving patient care. Large team available round the clock ( night and day even on weekends) .
+ Our integrated care team ensures that our patient’s physical, mental and support systems are working together to produce a holistic outcome.
+Technology: Technological superiority forms our backbone for the human medical resources  to deliver services efficiently and safely. We embrace emerging technologies that continuously advance the capabilities of modern medicine.
+
+Procedures: Our medical team includes skilled professionals who excel in clinical and surgical skills of advanced procedures  that benefits the patients by minimal pain and discomfort, less time in the hospital ,
+ faster recovery period, quicker resumption of your regular routines in life, less scarring and elimination of many potential complications from conventional surgery.
+Facilities:
+Surgical suites with full integration systems and cutting-edge medical equipment.
+Trauma Center with multiple trauma rooms and a dedicated CT scanner enables doctors to identify what’s wrong with patients immediately upon their arrival.
+Intensive Care Units employ a “line of sight” approach that ensures 360 degree access to critically ill patients.
+Surgical Observation Unit is a specialized area where patients receive additional post-operative or post-procedural care.
+Rehabilitation Services Department provides inpatient and outpatient rehabilitation services – physical and occupational therapy.
+Community service: In our efforts to contribute to the cause of medical welfare of the region, we are delivering the quality medical care to people of the remote places through our mobile hospitals.
+</p>
+</pre>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
